@@ -34,6 +34,6 @@ FTDI.
 
 ## Contributing
 
-Contributions are welcome through pull requests — see the contributing guide in
-the [organisation profile](https://github.com/NetRadar-Testbed). Report security
-issues privately (see [Security](security.md#reporting-a-vulnerability)).
+Contributions are welcome! Please fork the repository, make your changes on a branch
+and open a pull request against `main`. More details in
+[CONTRIBUTING.md](https://github.com/NetRadar-Testbed/.github/blob/main/CONTRIBUTING.md).

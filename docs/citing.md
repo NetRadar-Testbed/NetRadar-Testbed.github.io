@@ -1,11 +1,9 @@
 # Citing NetRadar
 
-NetRadar is free to use under the Apache-2.0 licence. If you use this software,
-or a testbed built with it, in published work, we ask that you:
+NetRadar is free to use under the Apache-2.0 licence.
 
-1. **Cite our papers** (below), and
-2. **State that your testbed was built using the NetRadar open-source
-   software**, including the version you used.
+**Using NetRadar in your research?** Please cite our papers, and mention in your
+paper that your testbed was built with NetRadar.
 
 ## Papers
 

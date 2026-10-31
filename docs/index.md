@@ -2,29 +2,33 @@
 
 **NetRadar is an open-source networked mmWave radar testbed.** Several radar
 nodes, each a TI AWR2243 radar with an NVIDIA Jetson, capture frames on a shared,
-clock-synchronized hardware trigger and stream their detections to a **fusion
-center**. The fusion center self-calibrates the network (where every radar is and
-which way it faces) and shows all nodes' targets in one bird's-eye view.
+clock-synchronized hardware trigger and send what they see to a **fusion
+center**. The fusion center works out where every radar is and which way it
+faces, then shows all of their targets together in one bird's-eye view.
 
-This site shows you how to build **your own** NetRadar testbed from scratch, on
-your own private network.
+This site walks you through building **your own** NetRadar testbed, from an empty
+network to a calibrated set of radars.
 
 <figure markdown="span">
-  ![Four NetRadar radar nodes on tripods in a lab, with close-ups of one node's Jetson Orin Nano, DCA1000EVM capture card and AWR2243BOOST radar](assets/img/netradar-testbed.jpg){ width="900" loading=lazy }
-  <figcaption>A four-node NetRadar testbed. Each node: NVIDIA Jetson Orin Nano (compute + Wi-Fi), TI DCA1000EVM (ADC data capture), TI AWR2243BOOST (mmWave radar).</figcaption>
+  ![Four NetRadar radar nodes on tripods in a lab, next to close-ups of one node's Jetson Orin Nano, DCA1000EVM capture card and AWR2243BOOST radar](assets/img/netradar-testbed.jpg){ width="900" loading=lazy }
+  <figcaption>Our four-node testbed. Each node pairs an NVIDIA Jetson Orin Nano with a TI DCA1000EVM capture card and a TI AWR2243BOOST radar.</figcaption>
 </figure>
 
 ## See it in action
 
+<div class="grid" markdown>
+
 <figure markdown="span">
-  ![Outdoor courtyard with three radars on tripods, labelled Radar 1 in the foreground and Radars 2 and 3 in the distance](assets/img/outdoor-deployment.jpg){ width="800" loading=lazy }
-  <figcaption>Outdoor three-radar deployment used in the demo below (at UC Santa Barbara).</figcaption>
+  ![Three radars on tripods in a courtyard, labelled Radar 1 in front and Radars 2 and 3 in the distance](assets/img/outdoor-deployment.jpg){ loading=lazy }
+  <figcaption>The setup: three radars in a courtyard at UC Santa Barbara.</figcaption>
 </figure>
 
 <figure markdown="span">
-  ![Animation: first each radar's tracks in its own coordinates, then the three radars' estimated positions and orientations with the same people aligned across radars](assets/img/self-calibration-demo.gif){ width="800" loading=lazy }
-  <figcaption>Self-calibration in action: first each radar's tracks in its own coordinates, then the estimated radar positions and orientations (Radar 1 as reference) with the same people aligned across all three radars.</figcaption>
+  ![Animation: each radar's tracks in its own coordinates, then the radars' estimated positions and orientations with the tracks lined up](assets/img/self-calibration-demo.gif){ loading=lazy }
+  <figcaption>Each radar starts out seeing people in its own coordinates. Calibration finds where every radar is and which way it faces, and the tracks line up.</figcaption>
 </figure>
+
+</div>
 
 ## How it fits together
 
@@ -58,15 +62,21 @@ your own private network.
 3. [Fusion center](fusion-center.md), then [radar nodes](node.md).
 4. [Time synchronization](time-sync.md) and [first run & calibration](first-run.md).
 
-!!! note "Your network, your credentials"
-    Nothing in NetRadar points at an existing deployment. You create your own
-    Tailscale network, and the setup scripts generate fresh random passwords on
-    your machines.
+!!! tip "Your own testbed"
+    Everything runs on your own Tailscale network, and the setup scripts create
+    fresh passwords for each testbed, so you're in control from the start.
 
 ## Citing
 
-If you publish work that uses NetRadar or a testbed built with it, please
-[cite our papers](citing.md) and state that your testbed was built with NetRadar.
+**Using NetRadar in your research?** Please [cite our papers](citing.md), and
+mention in your paper that your testbed was built with NetRadar.
 
-NetRadar was developed as part of the **Chirp Capstone Project 2025–2026,
-University of California, Santa Barbara** — see [About](about.md).
+## Contributing
+
+Contributions are welcome! Please fork the repository, make your changes on a branch
+and open a pull request against `main`. More details in
+[CONTRIBUTING.md](https://github.com/NetRadar-Testbed/.github/blob/main/CONTRIBUTING.md).
+
+NetRadar was developed as part of the **Chirp Capstone Project 2025–2026 at the
+University of California, Santa Barbara**. Meet the team on the [About](about.md)
+page.

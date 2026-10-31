@@ -31,17 +31,26 @@ detections land in one shared frame.
 
 <figure markdown="span">
   ![Diagram: four radars with overlapping fields of view tracking walking people; pairwise self-calibration between radars, then network averaging](assets/img/self-calibration-approach.png){ width="600" loading=lazy }
-  <figcaption>What calibration needs: overlapping fields of view and people moving through them.</figcaption>
+  <figcaption>All calibration needs is radars whose views overlap, and people walking through the shared area.</figcaption>
 </figure>
 
-An example result, from the outdoor deployment on the [home page](index.md#see-it-in-action):
+Here is what it looks like on our outdoor setup:
+
+<div class="grid" markdown>
 
 <figure markdown="span">
-  ![Animation: first each radar's tracks in its own coordinates, then the three radars' estimated positions and orientations with the same people aligned across radars](assets/img/self-calibration-demo.gif){ width="700" loading=lazy }
-  <figcaption>Before calibration each radar's tracks are in its own coordinates; afterwards the radars' positions and orientations are known and the same people line up across radars.</figcaption>
+  ![Three radars on tripods in a courtyard, labelled Radar 1 in front and Radars 2 and 3 in the distance](assets/img/outdoor-deployment.jpg){ loading=lazy }
+  <figcaption>The setup: three radars in a courtyard at UC Santa Barbara.</figcaption>
 </figure>
 
-The method is described in our papers — see [Citing NetRadar](citing.md).
+<figure markdown="span">
+  ![Animation: each radar's tracks in its own coordinates, then the radars' estimated positions and orientations with the tracks lined up](assets/img/self-calibration-demo.gif){ loading=lazy }
+  <figcaption>Each radar starts out seeing people in its own coordinates. Calibration finds where every radar is and which way it faces, and the tracks line up.</figcaption>
+</figure>
+
+</div>
+
+You can read more about the method in our papers (see [Citing NetRadar](citing.md)).
 
 ## Where the data goes
 

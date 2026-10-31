@@ -5,8 +5,8 @@ Each node is a Jetson Orin Nano running
 an AWR2243BOOST radar and a DCA1000EVM capture card.
 
 <figure markdown="span">
-  ![Four NetRadar radar nodes on tripods in a lab, with close-ups of one node's Jetson Orin Nano, DCA1000EVM capture card and AWR2243BOOST radar](assets/img/netradar-testbed.jpg){ width="900" loading=lazy }
-  <figcaption>NetRadar nodes. Each node: NVIDIA Jetson Orin Nano (compute + Wi-Fi), TI DCA1000EVM (ADC data capture), TI AWR2243BOOST (mmWave radar).</figcaption>
+  ![Four NetRadar radar nodes on tripods in a lab, next to close-ups of one node's Jetson Orin Nano, DCA1000EVM capture card and AWR2243BOOST radar](assets/img/netradar-testbed.jpg){ width="900" loading=lazy }
+  <figcaption>Our four-node testbed. Each node pairs an NVIDIA Jetson Orin Nano with a TI DCA1000EVM capture card and a TI AWR2243BOOST radar.</figcaption>
 </figure>
 
 ## Wiring

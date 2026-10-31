@@ -51,7 +51,7 @@ From `src/radar/config.py` and `setup_radar/mmwaveconfig.txt` in NetRadar-Node:
 
 <figure markdown="span">
   ![Diagram: four radars with overlapping fields of view tracking walking people; pairwise self-calibration between radars, then network averaging](assets/img/self-calibration-approach.png){ width="700" loading=lazy }
-  <figcaption>Self-calibration: pairs of radars that see the same people moving estimate their relative position and orientation (pairwise self-calibration), and the estimates are combined across the network (network averaging).</figcaption>
+  <figcaption>Radars that see the same people walking can work out where they are relative to each other. NetRadar does this for each pair of radars, then combines the results across the whole network.</figcaption>
 </figure>
 
 Calibration runs on the fusion center on demand. It buffers live frames from all
