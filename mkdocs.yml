@@ -1,0 +1,58 @@
+site_name: NetRadar
+site_description: Build your own networked mmWave radar testbed — radar nodes, fusion center, time sync and self-calibration.
+site_url: https://netradar-testbed.github.io/
+repo_url: https://github.com/NetRadar-Testbed
+repo_name: NetRadar-Testbed
+copyright: NetRadar — developed as part of the Chirp Capstone Project 2025–2026, UC Santa Barbara. Apache-2.0.
+
+theme:
+  name: material
+  features:
+    - navigation.sections
+    - navigation.top
+    - navigation.footer
+    - content.code.copy
+    - search.suggest
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      toggle:
+        icon: material/weather-night
+        name: Dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: Light mode
+
+nav:
+  - Home: index.md
+  - Getting started: getting-started.md
+  - Setup:
+      - 1. Your Tailscale network: tailscale.md
+      - 2. Fusion center: fusion-center.md
+      - 3. Radar nodes: node.md
+      - 4. Time synchronization: time-sync.md
+      - 5. First run and calibration: first-run.md
+  - Reference:
+      - Dashboard: dashboard.md
+      - Architecture: architecture.md
+      - MQTT protocol: protocol.md
+      - Security: security.md
+      - Troubleshooting: troubleshooting.md
+  - Citing NetRadar: citing.md
+  - About: about.md
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.superfences
